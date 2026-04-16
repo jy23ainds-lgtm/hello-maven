@@ -1,0 +1,9 @@
+---
+- name: Deploy Artifact to Localhost
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Copy the artifact to Desktop
+      copy:
+        src: target/MyMavenApp-1.0-SNAPSHOT.jar
+        dest: /home/student/Desktop/t.jar
