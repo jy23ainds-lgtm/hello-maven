@@ -1,7 +1,8 @@
 ---
 - name: Deploy Artifact to Localhost
   hosts: localhost
-  become: yes
+  gather_facts: no
+
   tasks:
     - name: Copy the artifact to Desktop
       copy:
